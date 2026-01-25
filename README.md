@@ -1,8 +1,8 @@
-# Network-Manager
+# NetworkLobbyManager
 
 ## Dependencies
 ### [Mirror](https://github.com/vis2k/Mirror)
-Network-Manager is obviously dependant on Mirror which is a streamline, bug fixed, maintained version of UNET for Unity.
+NetworkLobbyManager is obviously dependant on Mirror which is a streamline, bug fixed, maintained version of UNET for Unity.
 ### [FizzySteamworks](https://github.com/Dobtyk/FizzySteamworks)
 FizzySteamworks is a Steam P2P transport for Mirror, it utilizes Steam's P2P service to directly connect or relay your connection to another player.
 

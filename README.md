@@ -8,3 +8,9 @@ FizzySteamworks is a Steam P2P transport for Mirror, it utilizes Steam's P2P ser
 
 ### [Steamworks.NET](https://github.com/rlabrecque/Steamworks.NET)
 FizzySteamworks relies on Steamworks.NET to communicate with the Steamworks API, so you will need that installed and initalized properly before you can use this transport.
+
+## Installation
+### Unity Package Manager
+1) Open the package manager and click the '+' (plus) button located in the upper left of the window.
+2) Select `Add package from git URL...` when prompted provide the following URL:  
+    `https://github.com/Dobvik/NetworkLobbyManager.git?path=/Assets/Network%20Lobby%20Manager`

@@ -11,7 +11,7 @@
     {
       "displayName": "Example Steam",
       "description": "Contains an example of how a manager works with Steam.",
-      "path": "Samples~/Example"
+      "path": "Samples/Example"
     }
   ]
 }

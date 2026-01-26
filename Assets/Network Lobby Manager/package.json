@@ -6,5 +6,12 @@
   "author": {
     "name": "Ruslan Nukhov",
     "email": "nukhov2004@bk.ru"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "Example Steam",
+      "description": "Contains an example of how a manager works with Steam.",
+      "path": "Samples/Example"
+    }
+  ]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "com.dobvik.networklobbymanager",
+  "displayName": "NetworkLobbyManager",
+  "version": "0.1.0",
+  "description": "Network lobby manager for Mirror.",
+  "author": {
+    "name": "Ruslan",
+    "email": "nukhov2004@bk.ru"
+  }
+}

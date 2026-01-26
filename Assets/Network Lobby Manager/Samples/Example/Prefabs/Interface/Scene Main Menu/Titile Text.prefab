@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8701936687990416447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1130555467300817417, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130555467300817417, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130555467300817417, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130555467300817417, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130555467300817417, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838226948192901551, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+      propertyPath: m_Name
+      value: Titile Text
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8349305992251052200, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+    - {fileID: 1328140453629596198, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+    - {fileID: -6293152826438923944, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ad159bbbdab0e64b905562305e943f7, type: 3}

@@ -9,7 +9,7 @@ namespace NetworkLobbyManager
     public class BaseLobbyNetworkManager : NetworkManager
     {
         [Header("Custom settings")]
-        [SerializeField] private NetworkLobbyPlayer lobbyPlayerPrefab;
+        [SerializeField] private BaseNetworkLobbyPlayer lobbyPlayerPrefab;
         private bool isInTransition;
 
         #region Server

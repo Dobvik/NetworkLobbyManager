@@ -264,22 +264,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 921334021835737926, guid: 86a69f664ed0ecd4eb62251c4daf3188, type: 3}
-      propertyPath: onlineScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 921334021835737926, guid: 86a69f664ed0ecd4eb62251c4daf3188, type: 3}
-      propertyPath: offlineScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 921334021835737926, guid: 86a69f664ed0ecd4eb62251c4daf3188, type: 3}
-      propertyPath: firstGameScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 921334021835737926, guid: 86a69f664ed0ecd4eb62251c4daf3188, type: 3}
-      propertyPath: secondGameScene
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1720425134277545516, guid: 86a69f664ed0ecd4eb62251c4daf3188, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -430,29 +414,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1849569353273888714, guid: 03012c33f576d124c89632b74b946630, type: 3}
-      propertyPath: onlineScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1849569353273888714, guid: 03012c33f576d124c89632b74b946630, type: 3}
-      propertyPath: offlineScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1849569353273888714, guid: 03012c33f576d124c89632b74b946630, type: 3}
-      propertyPath: firstGameScene
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1849569353273888714, guid: 03012c33f576d124c89632b74b946630, type: 3}
-      propertyPath: secondGameScene
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2872820690774600593, guid: 03012c33f576d124c89632b74b946630, type: 3}
       propertyPath: m_Name
       value: Network Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2872820690774600593, guid: 03012c33f576d124c89632b74b946630, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7803595249253394620}
-  - component: {fileID: 5790963730302130690}
+  - component: {fileID: 5706272586986828508}
   - component: {fileID: -254144432389769469}
   m_Layer: 0
   m_Name: Lobby Player
@@ -33,7 +33,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5790963730302130690
+--- !u!114 &5706272586986828508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,16 +42,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 791570572632436234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558da37e58d32cd48b0bd7755e6ce08b, type: 3}
+  m_Script: {fileID: 11500000, guid: d63b23008b1e73b46926371c69289773, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkLobbyManager.Example.CustomNetworkLobbyPlayer
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  onPlayerNameChanged:
+  onSteamIDChanged:
     m_PersistentCalls:
       m_Calls: []
-  lobbyPlayerUIPrefab: {fileID: 3719706286289603365, guid: b4248f7994f646d439fc4cb24b89b8cc, type: 3}
+  onPlayerSteamNameChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  steamID:
+    m_SteamID: 0
+  playerSteamName: 
 --- !u!114 &-254144432389769469
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -57,11 +57,6 @@ namespace NetworkLobbyManager
             base.Awake();
         }
 
-        public void LeaveSteamLobby()
-        {
-        
-        }
-
         private IEnumerator UpdatePingLocation(CSteamID lobbyID)
         {
             while (SteamNetworkingUtils.GetLocalPingLocation(out _) < 0)

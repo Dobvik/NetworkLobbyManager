@@ -9,21 +9,21 @@ namespace NetworkLobbyManager.Example
         [SerializeField] private LayoutGroup drawersLayoutGroup;
         [SerializeField] private LobbyPlayerDrawer lobbyPlayerDrawerPrefab;
 
-        private readonly Dictionary<NetworkLobbyPlayer, LobbyPlayerDrawer> playerDrawers = new ();
+        private readonly Dictionary<BaseNetworkLobbyPlayer, LobbyPlayerDrawer> playerDrawers = new ();
 
-        public void AddPlayer(NetworkLobbyPlayer networkLobbyPlayer)
+        public void AddPlayer(BaseNetworkLobbyPlayer baseNetworkLobbyPlayer)
         {
-            if (playerDrawers.ContainsKey(networkLobbyPlayer))
+            if (playerDrawers.ContainsKey(baseNetworkLobbyPlayer))
             {
                 return;
             }
     
             var instance = Instantiate(lobbyPlayerDrawerPrefab, drawersLayoutGroup.transform);
-            instance.Initialize(networkLobbyPlayer);
-            playerDrawers[networkLobbyPlayer] = instance;
+            instance.Initialize(baseNetworkLobbyPlayer);
+            playerDrawers[baseNetworkLobbyPlayer] = instance;
         }
 
-        public void RemovePlayer(NetworkLobbyPlayer player)
+        public void RemovePlayer(BaseNetworkLobbyPlayer player)
         {
             Destroy(playerDrawers[player].gameObject);
             playerDrawers.Remove(player);

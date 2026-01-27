@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.dobvik.networklobbymanager": {
-      "version": "file:com.dobvik.networklobbymanager",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.mirror.steamworks.net": {
       "version": "https://github.com/Chykary/FizzySteamworks.git?path=/com.mirror.steamworks.net",
       "depth": 0,

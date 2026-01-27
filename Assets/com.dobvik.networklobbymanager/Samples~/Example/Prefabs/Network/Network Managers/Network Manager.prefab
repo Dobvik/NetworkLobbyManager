@@ -51,8 +51,10 @@ MonoBehaviour:
   headlessStartMode: 0
   editorAutoStart: 0
   sendRate: 60
-  offlineScene: 
-  onlineScene: 
+  offlineScene: Assets/com.dobvik.networklobbymanager/Samples/Example/Scenes/Main
+    Menu.unity
+  onlineScene: Assets/com.dobvik.networklobbymanager/Samples/Example/Scenes/Lobby
+    (Online).unity
   offlineSceneLoadDelay: 0
   transport: {fileID: 1639695359844308932}
   networkAddress: localhost
@@ -80,9 +82,11 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
-  lobbyPlayerPrefab: {fileID: 5790963730302130690, guid: 53625df2e2ab3a145b0ed60fe86835f9, type: 3}
-  firstGameScene: 
-  secondGameScene: 
+  lobbyPlayerPrefab: {fileID: 5706272586986828508, guid: 53625df2e2ab3a145b0ed60fe86835f9, type: 3}
+  firstGameScene: Assets/com.dobvik.networklobbymanager/Samples/Example/Scenes/Game
+    1 (Online).unity
+  secondGameScene: Assets/com.dobvik.networklobbymanager/Samples/Example/Scenes/Game
+    2 (Online).unity
 --- !u!114 &1639695359844308932
 MonoBehaviour:
   m_ObjectHideFlags: 0

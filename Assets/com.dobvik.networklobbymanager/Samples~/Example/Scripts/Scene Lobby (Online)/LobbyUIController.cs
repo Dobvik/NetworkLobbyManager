@@ -26,14 +26,14 @@ namespace NetworkLobbyManager.Example
             enterGameButton.onClick.AddListener(EnterGame);
         }
 
-        public void AddPlayerUI(NetworkLobbyPlayer networkLobbyPlayer)
+        public void AddPlayerUI(BaseNetworkLobbyPlayer baseNetworkLobbyPlayer)
         {
-            playerLobbyListDrawer.AddPlayer(networkLobbyPlayer);
+            playerLobbyListDrawer.AddPlayer(baseNetworkLobbyPlayer);
         }
 
-        public void RemovePlayerUI(NetworkLobbyPlayer networkLobbyPlayer)
+        public void RemovePlayerUI(BaseNetworkLobbyPlayer baseNetworkLobbyPlayer)
         {
-            playerLobbyListDrawer.RemovePlayer(networkLobbyPlayer);
+            playerLobbyListDrawer.RemovePlayer(baseNetworkLobbyPlayer);
         }
 
         #region Buttons

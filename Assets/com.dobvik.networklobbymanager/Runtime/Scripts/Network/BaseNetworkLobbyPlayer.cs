@@ -1,22 +1,21 @@
 using Mirror;
-//using NetworkLobbyManager.Example; need for example
 using Steamworks;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace NetworkLobbyManager
 {
-    public class NetworkLobbyPlayer : NetworkBehaviour
+    public class BaseNetworkLobbyPlayer : NetworkBehaviour
     {
-        public CSteamID SteamID => steamID;
-        public string PlayerSteamName => playerSteamName;
-
         [Header("Callbacks")]
         private Callback<PersonaStateChange_t> personaStateChange;
-
+        
         [Header("Events")]
-        [HideInInspector] public UnityEvent<NetworkLobbyPlayer> onSteamIDChanged;
-        [HideInInspector] public UnityEvent<NetworkLobbyPlayer> onPlayerSteamNameChanged;
+        [HideInInspector] public UnityEvent<BaseNetworkLobbyPlayer> onSteamIDChanged;
+        [HideInInspector] public UnityEvent<BaseNetworkLobbyPlayer> onPlayerSteamNameChanged;
+        
+        public CSteamID SteamID => steamID;
+        public string PlayerSteamName => playerSteamName;
 
         #region SyncVars
 
@@ -56,6 +55,7 @@ namespace NetworkLobbyManager
             {
                 return;
             }
+            
             personaStateChange = Callback<PersonaStateChange_t>.Create(OnPersonaStateChange);
         }
 
@@ -83,16 +83,6 @@ namespace NetworkLobbyManager
 
         #region Client
 
-        public override void OnStartClient()
-        {
-            InitializeNewPlayerUI();
-        }
-
-        public override void OnStopClient()
-        {
-            //LobbyUIController.Instance.RemovePlayerUI(this); need for example
-        }
-
         public override void OnStartAuthority()
         {
             CommandUpdateSteamID(SteamUser.GetSteamID());
@@ -119,21 +109,6 @@ namespace NetworkLobbyManager
         private void OnSteamIDChanged()
         {
             playerSteamName = SteamFriends.GetFriendPersonaName(steamID);
-        }
-
-        private void InvokeAllClientEvents()
-        {
-            onPlayerSteamNameChanged.Invoke(this);
-        }
-
-        #endregion
-
-        #region Other Functions
-
-        private void InitializeNewPlayerUI()
-        {
-            //LobbyUIController.Instance.AddPlayerUI(this); Need for example
-            InvokeAllClientEvents();
         }
 
         #endregion

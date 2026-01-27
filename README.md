@@ -13,4 +13,4 @@ FizzySteamworks relies on Steamworks.NET to communicate with the Steamworks API,
 ### Unity Package Manager
 1) Open the package manager and click the '+' (plus) button located in the upper left of the window.
 2) Select `Add package from git URL...` when prompted provide the following URL:  
-    `https://github.com/Dobvik/NetworkLobbyManager.git?path=/Packages/com.dobvik.networklobbymanager`
+    `https://github.com/Dobvik/NetworkLobbyManager.git?path=/Assets/com.dobvik.networklobbymanager`

@@ -28,7 +28,7 @@ namespace NetworkLobbyManager.Example
     
         private void OnEnable()
         {
-            if (!CustomSteamManager.Initialized)
+            if (!BaseSteamManager.Initialized)
             {
                 return;
             }
@@ -81,7 +81,7 @@ namespace NetworkLobbyManager.Example
         private void OnLobbyEntered(LobbyEnter_t callback)
         {
             var hostAddress = SteamMatchmaking.GetLobbyData(new CSteamID(callback.m_ulSteamIDLobby), ServerSteamInformation.HOST_ADDRESS_KEY);
-            CustomSteamManager.Instance.CurrentLobbyID = new CSteamID(callback.m_ulSteamIDLobby);
+            BaseSteamManager.Instance.CurrentLobbyID = new CSteamID(callback.m_ulSteamIDLobby);
             CustomNetworkManager.singleton.networkAddress = hostAddress;
             CustomNetworkManager.singleton.StartClient();
         }

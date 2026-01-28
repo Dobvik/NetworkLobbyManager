@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace NetworkLobbyManager
 {
-    public class CustomSteamManager : SteamManager
+    public class BaseSteamManager : SteamManager
     {
 #if !DISABLESTEAMWORKS
 
-        private static CustomSteamManager instance;
-        public new static CustomSteamManager Instance => instance ?? new GameObject("Steam Manager").AddComponent<CustomSteamManager>();
+        private static BaseSteamManager instance;
+        public new static BaseSteamManager Instance => instance ?? new GameObject("Steam Manager").AddComponent<BaseSteamManager>();
 
         public new static bool Initialized => Instance.m_bInitialized;
 

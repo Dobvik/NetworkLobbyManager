@@ -7,16 +7,16 @@ namespace NetworkLobbyManager.Example
     {
         [SerializeField] private TMP_Text playerNameText;
     
-        private BaseNetworkLobbyPlayer currentBaseNetworkLobbyPlayer;
+        private SteamLobbyPlayerInformation currentSteamLobbyPlayerInformation;
     
         public void Initialize(BaseNetworkLobbyPlayer baseNetworkLobbyPlayer)
         {
-            currentBaseNetworkLobbyPlayer = baseNetworkLobbyPlayer;
-            baseNetworkLobbyPlayer.onPlayerSteamNameChanged.AddListener(OnPlayerNameChanged);
-            OnPlayerNameChanged(currentBaseNetworkLobbyPlayer);
+            currentSteamLobbyPlayerInformation = baseNetworkLobbyPlayer.SteamLobbyPlayerInformation;
+            currentSteamLobbyPlayerInformation.onPlayerSteamNameChanged.AddListener(OnPlayerNameChanged);
+            OnPlayerNameChanged(currentSteamLobbyPlayerInformation);
         }
     
-        private void OnPlayerNameChanged(BaseNetworkLobbyPlayer player)
+        private void OnPlayerNameChanged(SteamLobbyPlayerInformation player)
         {
             playerNameText.text = player.PlayerSteamName;
         }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7803595249253394620}
   - component: {fileID: 5706272586986828508}
+  - component: {fileID: 6003951594504524032}
   - component: {fileID: -254144432389769469}
   m_Layer: 0
   m_Name: Lobby Player
@@ -45,6 +46,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63b23008b1e73b46926371c69289773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkLobbyManager.Example.CustomNetworkLobbyPlayer
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  steamLobbyPlayerInformation: {fileID: 6003951594504524032}
+--- !u!114 &6003951594504524032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791570572632436234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b05a144060fe194dbec395e6be0ce9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dobvik.Networklobbymanager::NetworkLobbyManager.SteamLobbyPlayerInformation
   syncDirection: 0
   syncMode: 0
   syncInterval: 0

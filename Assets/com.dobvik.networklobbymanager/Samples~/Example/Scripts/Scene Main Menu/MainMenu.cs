@@ -25,7 +25,7 @@ namespace NetworkLobbyManager.Example
     
         private void OnEnable()
         {
-            if (!CustomSteamManager.Initialized)
+            if (!BaseSteamManager.Initialized)
             {
                 return;
             }
@@ -78,7 +78,7 @@ namespace NetworkLobbyManager.Example
             //Debug.Log($"Lobby {callback.m_eResult}"); // Broadcasts as lobby status.
         
             CustomNetworkManager.singleton.StartHost();
-            CustomSteamManager.Instance.CurrentLobbyID = new CSteamID(callback.m_ulSteamIDLobby);
+            BaseSteamManager.Instance.CurrentLobbyID = new CSteamID(callback.m_ulSteamIDLobby);
         }
 
         #endregion

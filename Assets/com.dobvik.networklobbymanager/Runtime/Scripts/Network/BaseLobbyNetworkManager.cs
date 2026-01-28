@@ -65,12 +65,12 @@ namespace NetworkLobbyManager
 
         public override void OnStopClient()
         {
-            if (!CustomSteamManager.Initialized)
+            if (!BaseSteamManager.Initialized)
             {
                 return;
             }
         
-            CustomSteamManager.Instance.CurrentLobbyID = CSteamID.Nil;
+            BaseSteamManager.Instance.CurrentLobbyID = CSteamID.Nil;
         }
 
         public override void OnClientSceneChanged()

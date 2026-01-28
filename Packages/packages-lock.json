@@ -22,7 +22,7 @@
       "hash": "3016fca9cfdebe8c5aa04102195d4fed7947dee2"
     },
     "com.unity.ai.navigation": {
-      "version": "2.0.9",
+      "version": "2.0.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -51,7 +51,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.11.2",
+      "version": "2.11.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

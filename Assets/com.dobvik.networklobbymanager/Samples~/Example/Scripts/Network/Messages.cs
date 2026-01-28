@@ -1,6 +1,6 @@
 using Mirror;
 
-namespace NetworkLobbyManager
+namespace NetworkLobbyManager.Example
 {
     public struct PlayerEntryGameMessage : NetworkMessage { }
 }

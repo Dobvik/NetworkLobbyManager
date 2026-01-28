@@ -3,7 +3,7 @@ using Mirror;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace NetworkLobbyManager
+namespace NetworkLobbyManager.Example
 {
     public class CustomNetworkManager : BaseLobbyNetworkManager
     {
@@ -22,12 +22,9 @@ namespace NetworkLobbyManager
         public override void OnServerReady(NetworkConnectionToClient connectionToClient)
         {
             base.OnServerReady(connectionToClient);
-        
-            if (connectionToClient.identity == null)
-            {
-                var message = new SceneMessage { sceneName = serverCurrentSubScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true };
-                connectionToClient.Send(message);
-            }
+            
+            var message = new SceneMessage { sceneName = serverCurrentSubScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true };
+            connectionToClient.Send(message);
         }
     
         public override void OnStartServer()

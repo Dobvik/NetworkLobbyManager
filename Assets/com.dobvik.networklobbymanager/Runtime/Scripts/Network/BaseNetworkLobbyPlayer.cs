@@ -43,7 +43,7 @@ namespace NetworkLobbyManager
 
         private void Awake()
         {
-            if (CustomNetworkManager.singleton.dontDestroyOnLoad)
+            if (NetworkManager.singleton.dontDestroyOnLoad)
             {
                 DontDestroyOnLoad(gameObject);
             }

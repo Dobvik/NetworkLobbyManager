@@ -13,7 +13,6 @@ namespace NetworkLobbyManager.Example
         [Header("All sub-scenes")]
         [Scene, SerializeField] private string firstGameScene;
         [Scene, SerializeField] private string secondGameScene;
-        [Scene] private string serverCurrentSubScene;
         public string FirstGameScene => firstGameScene;
         public string SecondGameScene => secondGameScene;
 
@@ -23,7 +22,7 @@ namespace NetworkLobbyManager.Example
         {
             base.OnServerReady(connectionToClient);
             
-            var message = new SceneMessage { sceneName = serverCurrentSubScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true };
+            var message = new SceneMessage { sceneName = firstGameScene, sceneOperation = SceneOperation.LoadAdditive, customHandling = true };
             connectionToClient.Send(message);
         }
     
@@ -34,7 +33,7 @@ namespace NetworkLobbyManager.Example
 
         private void OnPlayerEntryGame(NetworkConnectionToClient networkConnectionToClient, PlayerEntryGameMessage playerEntryGameMessage)
         {
-            InitializePlayer(networkConnectionToClient, serverCurrentSubScene); // TODO: Be careful, players can call this without any restrictions
+            InitializePlayer(networkConnectionToClient, firstGameScene); // TODO: Be careful, players can call this without any restrictions
         }
 
         public override void OnServerSceneChanged(string sceneName)
@@ -42,12 +41,12 @@ namespace NetworkLobbyManager.Example
             if (sceneName == onlineScene)
             {
                 StartCoroutine(ServerLoadSubScene(firstGameScene));
-                serverCurrentSubScene = firstGameScene;
+                StartCoroutine(ServerLoadSubScene(secondGameScene));
             }
         }
 
         [Server]
-        private IEnumerator SendPlayerToNewScene(GameObject player, string sceneName)
+        public IEnumerator SendPlayerToNewScene(GameObject player, string sceneName)
         {
             if (!player.TryGetComponent(out NetworkIdentity identity))
             {
@@ -67,9 +66,11 @@ namespace NetworkLobbyManager.Example
         
             yield return null;
         
-            player.transform.position = GetStartPosition().position;
+            var startPosition = GetStartPosition();
+            
+            player.transform.position = startPosition?.position ?? Vector3.zero;
     
-            SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByPath(serverCurrentSubScene));
+            SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByPath(sceneName));
         
             connectionToClient.Send(new SceneMessage { sceneName = sceneName, sceneOperation = SceneOperation.LoadAdditive, customHandling = true });
         

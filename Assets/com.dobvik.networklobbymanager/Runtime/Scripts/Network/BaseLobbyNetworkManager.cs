@@ -25,7 +25,7 @@ namespace NetworkLobbyManager
         }
 
         [Server]
-        protected void InitializePlayer(NetworkConnectionToClient connectionToClient, string sceneName)
+        protected virtual void InitializePlayer(NetworkConnectionToClient connectionToClient, string sceneName)
         {
             var startPosition = GetStartPosition();
             var player = startPosition is not null ? Instantiate(playerPrefab, startPosition.position, startPosition.rotation) : Instantiate(playerPrefab);
@@ -36,7 +36,7 @@ namespace NetworkLobbyManager
         }
 
         [Server]
-        protected void InitializeLobbyPlayer(NetworkConnectionToClient connectionToClient)
+        protected virtual void InitializeLobbyPlayer(NetworkConnectionToClient connectionToClient)
         {
             var newLobbyPlayer = Instantiate(lobbyPlayerPrefab.gameObject, Vector3.zero, Quaternion.identity);
             newLobbyPlayer.name = $"{lobbyPlayerPrefab.name} [connection ID = {connectionToClient.connectionId}]";

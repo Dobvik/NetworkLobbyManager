@@ -1,7 +1,7 @@
 {
   "name": "com.dobvik.networklobbymanager",
   "displayName": "Network Lobby Manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Network lobby manager for Mirror.",
   "author": {
     "name": "Ruslan Nukhov",

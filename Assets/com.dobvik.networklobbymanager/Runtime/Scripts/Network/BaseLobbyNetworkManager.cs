@@ -12,7 +12,7 @@ namespace NetworkLobbyManager
         [HideInInspector] public UnityEvent onClientSceneChanged;
         
         [Header("Custom settings")]
-        [SerializeField] private BaseNetworkLobbyPlayer lobbyPlayerPrefab;
+        [SerializeField] protected BaseNetworkLobbyPlayer lobbyPlayerPrefab;
         private bool isInTransition;
 
         #region Server

@@ -2,15 +2,12 @@ using System.Collections;
 using Mirror;
 using Steamworks;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace NetworkLobbyManager
 {
     public class BaseLobbyNetworkManager : NetworkManager
     {
-        [HideInInspector] public UnityEvent onClientSceneChanged;
-        
         [Header("Custom settings")]
         [SerializeField] protected BaseNetworkLobbyPlayer lobbyPlayerPrefab;
         private bool isInTransition;
@@ -81,7 +78,6 @@ namespace NetworkLobbyManager
             if (!isInTransition)
             {
                 base.OnClientSceneChanged();
-                onClientSceneChanged.Invoke();
             }
         }
 

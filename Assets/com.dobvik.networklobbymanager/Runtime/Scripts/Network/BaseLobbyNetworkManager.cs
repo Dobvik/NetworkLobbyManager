@@ -99,7 +99,7 @@ namespace NetworkLobbyManager
         #region Loading Scenes
 
         [Server]
-        public IEnumerator ServerLoadSubScene(string sceneName)
+        public virtual IEnumerator ServerLoadSubScene(string sceneName)
         {
             yield return SceneManager.LoadSceneAsync(sceneName, new LoadSceneParameters
             {
@@ -109,7 +109,7 @@ namespace NetworkLobbyManager
         }
 
         [Server]
-        public IEnumerator ServerUnloadSubScene(string sceneName)
+        public virtual IEnumerator ServerUnloadSubScene(string sceneName)
         {
             if (SceneManager.GetSceneByName(sceneName).IsValid() || SceneManager.GetSceneByPath(sceneName).IsValid())
             {
@@ -118,7 +118,7 @@ namespace NetworkLobbyManager
             }
         }
 
-        private IEnumerator ClientLoadAdditive(string sceneName)
+        protected virtual IEnumerator ClientLoadAdditive(string sceneName)
         {
             isInTransition = true;
     
@@ -136,7 +136,7 @@ namespace NetworkLobbyManager
             OnClientSceneChanged();
         }
 
-        private IEnumerator ClientUnloadAdditive(string sceneName)
+        protected virtual IEnumerator ClientUnloadAdditive(string sceneName)
         {
             isInTransition = true;
     

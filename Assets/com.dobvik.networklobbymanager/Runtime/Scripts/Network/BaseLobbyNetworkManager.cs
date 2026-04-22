@@ -10,7 +10,7 @@ namespace NetworkLobbyManager
     {
         [Header("Custom settings")]
         [SerializeField] protected BaseNetworkLobbyPlayer lobbyPlayerPrefab;
-        private bool isInTransition;
+        protected bool isInTransition;
 
         #region Server
 

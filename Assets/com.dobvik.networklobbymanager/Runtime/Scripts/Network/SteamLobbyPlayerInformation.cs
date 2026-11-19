@@ -93,8 +93,26 @@ namespace NetworkLobbyManager
         
         public override void OnStartServer()
         {
-            var indexLastConnectedPlayer = SteamMatchmaking.GetNumLobbyMembers(BaseSteamManager.Instance.CurrentLobbyID) - 1;
-            steamID = SteamMatchmaking.GetLobbyMemberByIndex(BaseSteamManager.Instance.CurrentLobbyID, indexLastConnectedPlayer);
+            if (!BaseSteamManager.Initialized)
+            {
+                return;
+            }
+
+            if (connectionToClient is LocalConnectionToClient)
+            {
+                steamID = SteamUser.GetSteamID();
+                return;
+            }
+
+            if (connectionToClient != null && ulong.TryParse(connectionToClient.address, out var value))
+            {
+                var peerId = new CSteamID(value);
+                
+                if (peerId.IsValid())
+                {
+                    steamID = peerId;
+                }
+            }
         }
         
         #endregion

@@ -63,6 +63,11 @@ namespace NetworkLobbyManager
 
         #region Client
 
+        public override void OnStartClient()
+        {
+            
+        }
+        
         public override void OnStopClient()
         {
             if (!BaseSteamManager.Initialized)
